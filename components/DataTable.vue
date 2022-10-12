@@ -1,7 +1,7 @@
 <template>
-  <div class="brands-table-wrapper">
-    <table class="brands-table" cellspacing="0" cellpadding="0">
-      <thead class="brands-table-head">
+  <div class="comments-table-wrapper">
+    <table class="comments-table" cellspacing="0" cellpadding="0">
+      <thead class="comments-table-head">
         <tr>
           <th v-for="(item, idx) in tHead" :key="idx" class="num">
             <div class="th-content">
@@ -17,7 +17,7 @@
           <th></th>
         </tr>
       </thead>
-      <tbody class="brands-table-body" v-if="tBody.length">
+      <tbody class="comments-table-body" v-if="tBody.length">
         <tr
           @click="openComment(info.id)"
           v-for="(info, idx) in tBody"
@@ -113,7 +113,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.brands {
+.comments {
   &-table-wrapper {
     width: 100%;
     height: auto;
@@ -201,7 +201,7 @@ export default {
       &:hover {
         background-color: rgba(215, 218, 228, 0.2);
       }
-      
+
       td {
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
